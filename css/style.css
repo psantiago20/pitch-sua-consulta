@@ -2155,7 +2155,7 @@ body.light-theme .contact-item i {
     position: fixed;
     bottom: 24px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(calc(100% + 24px)); /* Retracted by default */
     background: rgba(0, 20, 39, 0.7);
     backdrop-filter: var(--blur-glass);
     border: 1px solid var(--border-color);
@@ -2168,6 +2168,24 @@ body.light-theme .contact-item i {
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     transition: var(--transition-smooth);
 }
+
+/* Hover trigger zone at the bottom edge */
+.presentation-controls::after {
+    content: '';
+    position: absolute;
+    top: -50px; /* Extends 50px above the controls to capture mouse hovers */
+    left: -30px;
+    right: -30px;
+    bottom: -24px;
+    background: transparent;
+    pointer-events: auto;
+    z-index: -1; /* Ensures the hover zone doesn't block clicks on the buttons */
+}
+
+.presentation-controls:hover {
+    transform: translateX(-50%) translateY(0); /* Smoothly slides up on hover */
+}
+
 body.light-theme .presentation-controls {
     background: rgba(255, 255, 255, 0.85);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
