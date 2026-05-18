@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Consulta - Technical Pitch Deck & Landing Page</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="presentation-mode dark-theme">
+    
+    <!-- HEADER / NAVIGATION -->
+    <header class="main-header">
+        <div class="header-logo">
+            <img src="assets/suaConsulta_logo.svg" alt="Sua Consulta" class="logo-img">
+            <span class="logo-text">Sua <span>Consulta</span></span>
+        </div>
+        
+        <!-- View Mode Selector -->
+        <div class="view-mode-selector">
+            <button class="mode-btn active" data-mode="presentation" title="Modo Apresentação (Slides)">
+                <i data-lucide="monitor"></i> <span>Apresentação</span>
+            </button>
+            <button class="mode-btn" data-mode="landing" title="Modo Landing Page (Rolagem)">
+                <i data-lucide="layout"></i> <span>Landing Page</span>
+            </button>
+        </div>
+
+        <div class="header-actions">
+            <button class="theme-toggle" id="themeToggleBtn" title="Alternar Tema">
+                <i data-lucide="sun" class="sun-icon"></i>
+                <i data-lucide="moon" class="moon-icon"></i>
+            </button>
+            <a href="https://github.com" target="_blank" class="btn btn-outline btn-sm">
+                <i data-lucide="github"></i> Repository
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN PRESENTATION / SCROLL CONTAINER -->
+    <main id="viewContainer" class="view-container">
+        
+        <!-- Slide 1: Abertura & Hook -->
+        <section id="slide1" class="slide-section active" data-slide="1">
+            <div class="slide-background"></div>
+            <div class="slide-content-wrapper grid-2-cols">
+                <div class="slide-left text-content">
+                    <span class="badge badge-accent">🩺 SaaS Deep Tech</span>
+                    <h1 class="slide-title gradient-text">Sua Consulta</h1>
+                    <h2 class="slide-subtitle">Gestão Inteligente de Serviços Clínicos por IA Orquestrada</h2>
+                    <p class="slide-description">Automatizando o ciclo de atendimento ponta a ponta: do primeiro contato no WhatsApp à atualização instantânea no prontuário médico em tempo real.</p>
+                    
+                    <ul class="highlight-list">
+                        <li><i data-lucide="zap"></i> <span>SaaS de alta performance integrado com WhatsApp Business Cloud API e Flutter.</span></li>
+                        <li><i data-lucide="git-branch"></i> <span>Orquestração autônoma de agentes via LangChain e LangGraph.</span></li>
+                        <li><i data-lucide="timer"></i> <span>Sincronização ativa ponta a ponta em tempo real inferior a 2 segundos.</span></li>
+                    </ul>
+                </div>
+                
+                <div class="slide-right visual-content">
+                    <div class="glass-card hero-preview">
+                        <div class="hero-glow"></div>
+                        <div class="card-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="card-title">Sua Consulta Ecosystem</span>
+                        </div>
+                        <div class="card-body-hero">
+                            <div class="app-mockup-wrapper">
+                                <div class="mockup-phone">
+                                    <div class="phone-screen">
+                                        <div class="phone-header">
+                                            <span class="phone-time">15:51</span>
+                                            <span class="phone-icons">📶 🔋</span>
+                                        </div>
+                                        <div class="phone-app-bar">
+                                            <span>Sua Consulta</span>
+                                            <i data-lucide="user"></i>
+                                        </div>
+                                        <div class="phone-chat-preview">
+                                            <div class="message incoming">Olá, gostaria de agendar uma consulta dermatológica.</div>
+                                            <div class="message outgoing">Com certeza! Sou a Isis, IA do Dr. Carlos. Temos vagas na quarta às 14h. Serve?</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="arrow-between-mockups">
+                                    <i data-lucide="arrow-right-left" class="animated-arrow"></i>
+                                </div>
+                                <div class="mockup-phone dashboard-phone">
+                                    <div class="phone-screen">
+                                        <div class="phone-header">
+                                            <span class="phone-time">15:51</span>
+                                            <span class="phone-icons">📶 🔋</span>
+                                        </div>
+                                        <div class="phone-app-bar doctor-app-bar">
+                                            <span>Dr. Carlos (CRM)</span>
+                                            <i data-lucide="bell"></i>
+                                        </div>
+                                        <div class="phone-dashboard-preview">
+                                            <div class="stat-card">
+                                                <span class="stat-label">Faturamento Mensal</span>
+                                                <span class="stat-value">R$ 38.450</span>
+                                            </div>
+                                            <div class="appointment-card pending">
+                                                <span class="app-time">Quarta-feira - 14:00</span>
+                                                <span class="app-patient">João Silva - Triagem Concluída</span>
+                                                <span class="app-status">Pendente de Confirmação</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Speech Script Drawer Content (Hidden in CSS, read by JS) -->
+            <div class="speech-script" style="display: none;">
+                "Olá a todos. Hoje vim lhes apresentar a Sua Consulta. No mercado de clínicas e serviços premium, o ativo mais precioso é o tempo dos profissionais e a experiência dos clientes. No entanto, o atendimento ainda é um caos analógico ou semi-automatizado via WhatsApp. Nós transformamos o WhatsApp em um canal de triagem inteligente, extração clínica automatizada e gestão transacional, sincronizado em tempo real com um ecossistema nativo em Flutter. Tudo isso sem intervenção humana, reduzindo custos operacionais de secretariado em até 70% e eliminando a perda de leads."
+            </div>
+        </section>
+
+        <!-- Slide 2: O Problema -->
+        <section id="slide2" class="slide-section" data-slide="2">
+            <div class="slide-background"></div>
+            <div class="slide-content-wrapper grid-2-cols">
+                <div class="slide-left text-content">
+                    <span class="badge badge-danger">⚠️ Gargalo Operacional</span>
+                    <h1 class="slide-title">O Gargalo da Comunicação e Gestão de Serviços</h1>
+                    <p class="slide-description">As clínicas e prestadores de serviços de alto nível enfrentam um problema invisível, porém devastador na retenção de leads e na eficiência administrativa.</p>
+                    
+                    <div class="problem-cards-grid">
+                        <div class="problem-card">
+                            <div class="card-icon red-icon"><i data-lucide="message-square-off"></i></div>
+                            <h3>Fricção na Aquisição</h3>
+                            <p>Clientes exigem instantaneidade pelo WhatsApp, mas dados se perdem em chats informais e não estruturados.</p>
+                        </div>
+                        
+                        <div class="problem-card">
+                            <div class="card-icon red-icon"><i data-lucide="eye-off"></i></div>
+                            <h3>Invisibilidade Operacional</h3>
+                            <p>Prestadores não controlam a agenda dinamicamente; pacientes não possuem histórico clínico consolidado.</p>
+                        </div>
+                        
+                        <div class="problem-card">
+                            <div class="card-icon red-icon"><i data-lucide="trending-down"></i></div>
+                            <h3>Perda Financeira Crítica</h3>
+                            <p>Alta taxa de no-show (faltas sem aviso prévio) e overhead administrativo insustentável com secretárias sobrecarregadas.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-right visual-content">
+                    <div class="glass-card problem-visual-card">
+                        <div class="card-header">
+                            <i data-lucide="alert-triangle" class="red-icon"></i>
+                            <span>O Impacto do Silêncio e Desorganização</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="metric-graph-container">
+                                <div class="metric-bar-group">
+                                    <span class="metric-label">Taxa de Resposta > 5 min</span>
+                                    <div class="metric-bar-wrapper">
+                                        <div class="metric-bar red-bar" style="width: 85%;">85%</div>
+                                    </div>
+                                    <span class="metric-sub">Leads perdidos por lentidão no WhatsApp</span>
+                                </div>
+                                <div class="metric-bar-group">
+                                    <span class="metric-label">Faltas Sem Aviso (No-Show)</span>
+                                    <div class="metric-bar-wrapper">
+                                        <div class="metric-bar red-bar" style="width: 35%;">35%</div>
+                                    </div>
+                                    <span class="metric-sub">Prejuízo com janelas ociosas na agenda</span>
+                                </div>
+                                <div class="metric-bar-group">
+                                    <span class="metric-label">Tempo Gasto em Administração</span>
+                                    <div class="metric-bar-wrapper">
+                                        <div class="metric-bar red-bar" style="width: 70%;">70%</div>
+                                    </div>
+                                    <span class="metric-sub">Esforço operacional da equipe de recepção</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="speech-script" style="display: none;">
+                "O problema central que resolvemos é duplo: a fricção de atendimento e a perda de dados. O cliente quer interagir de forma humana e rápida no WhatsApp. Mas para o médico, isso se traduz em um celular bagunçado, dados cruciais que se perdem no histórico e uma secretária sobrecarregada tentando transcrever exames e organizar agendas. A consequência direta é o cancelamento de consultas, a perda de dados financeiros e a insatisfação do paciente, que se sente desassistido."
+            </div>
+        </section>
+
+        <!-- Slide 3: A Solução -->
+        <section id="slide3" class="slide-section" data-slide="3">
+            <div class="slide-background"></div>
+            <div class="slide-content-wrapper grid-2-cols">
+                <div class="slide-left text-content">
+                    <span class="badge badge-success">💡 A Solução</span>
+                    <h1 class="slide-title">Sua Consulta: A Ponte entre a Conversa e a Transação</h1>
+                    <p class="slide-description">Nós eliminamos a barreira entre a conversa informal no WhatsApp e o controle operacional e clínico completo no app de gestão do médico.</p>
+                    
+                    <div class="solution-features">
+                        <div class="solution-item">
+                            <i data-lucide="check-circle" class="green-icon"></i>
+                            <div>
+                                <h4>Triagem Autônoma no WhatsApp (Isis IA)</h4>
+                                <p>Uma assistente médica virtual que extrai sintomas de áudios/textos, checa convênios e agendas.</p>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <i data-lucide="check-circle" class="green-icon"></i>
+                            <div>
+                                <h4>Sincronização em Tempo Real (Sub-2s)</h4>
+                                <p>Webhooks assíncronos e pipelines otimizados notificam o app do médico instantaneamente.</p>
+                            </div>
+                        </div>
+                        <div class="solution-item">
+                            <i data-lucide="check-circle" class="green-icon"></i>
+                            <div>
+                                <h4>App Flutter Dual-Profile (Sua Consulta)</h4>
+                                <p>Perfil Paciente para acompanhamento/laudos e Perfil Médico para controle financeiro, CRM clínico e agenda Material 3.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-right visual-content">
+                    <!-- LATENCY SIMULATOR INTERACTIVE WIDGET -->
+                    <div class="glass-card latency-widget">
+                        <div class="card-header">
+                            <i data-lucide="activity" class="accent-icon"></i>
+                            <span>Simulador de Latência Ponta a Ponta</span>
+                            <span class="latency-timer" id="latencyTimer">0.00s</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="simulation-area">
+                                <!-- Col 1: WhatsApp phone -->
+                                <div class="sim-phone-container">
+                                    <div class="sim-label">WhatsApp (Paciente)</div>
+                                    <div class="sim-phone">
+                                        <div class="sim-phone-header">Isis Assistente</div>
+                                        <div class="sim-chat-area" id="simChatArea">
+                                            <div class="bubble in">Olá, Dr. Carlos! Estou sentindo dor de garganta e queria marcar para amanhã à tarde.</div>
+                                            <div class="bubble out" id="simIsisResponse">Olá! Sou a Isis, assistente do Dr. Carlos. Vou providenciar isso agora mesmo.</div>
+                                        </div>
+                                        <button class="btn btn-primary btn-pill btn-block" id="btnTriggerLatencySim">
+                                            <i data-lucide="send"></i> Enviar Solicitação
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Central Pipeline -->
+                                <div class="sim-pipeline">
+                                    <div class="pipe-node" id="nodeWebhook">API Webhook</div>
+                                    <div class="pipe-line-h">
+                                        <div class="particle" id="simParticle"></div>
+                                    </div>
+                                    <div class="pipe-node" id="nodeFCM">Firebase FCM</div>
+                                </div>
+                                
+                                <!-- Col 2: Flutter phone -->
+                                <div class="sim-phone-container">
+                                    <div class="sim-label">App Flutter (Médico)</div>
+                                    <div class="sim-phone flutter-sim">
+                                        <div class="sim-phone-header dr-header">Sua Consulta</div>
+                                        <div class="sim-flutter-area" id="simFlutterArea">
+                                            <div class="no-appts" id="noApptsPlaceholder">Nenhum atendimento na fila</div>
+                                            <div class="appt-card-sim" id="apptCardSim">
+                                                <div class="card-badge">Novo Agendamento</div>
+                                                <h4>João da Silva</h4>
+                                                <p>Sintoma: Dor de garganta</p>
+                                                <div class="card-actions">
+                                                    <button class="btn-approve"><i data-lucide="check"></i></button>
+                                                    <button class="btn-reject"><i data-lucide="x"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sim-status-text" id="simStatusText">Clique em "Enviar Solicitação" para testar o envio ponta a ponta.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="speech-script" style="display: none;">
+                "Nossa solução, o Sua Consulta, é um ecossistema integrado. O paciente inicia o contato pelo WhatsApp. A nossa IA (Isis) realiza a triagem clínica preliminar, extrai os dados relevantes, confere a agenda e os convênios e envia as informações estruturadas. Em menos de 2 segundos, a consulta pendente aparece na dashboard do app Flutter do médico com notificações push automáticas via Firebase Cloud Messaging. O médico apenas confirma com um toque, e o paciente recebe o aviso no celular."
+            </div>
+        </section>
+
+        <!-- Slide 4: Arquitetura Técnica -->
+        <section id="slide4" class="slide-section" data-slide="4">
+            <div class="slide-background"></div>
+            <div class="slide-content-wrapper grid-2-cols">
+                <div class="slide-left text-content">
+                    <span class="badge badge-accent">🏛️ Arquitetura de Alto Nível</span>
+                    <h1 class="slide-title">Arquitetura de Alta Performance e Baixa Latência</h1>
+                    <p class="slide-description">Nossa stack foi projetada para garantir robustez, concorrência massiva de conexões assíncronas do WhatsApp API e segurança de dados transacionais.</p>
+                    
+                    <div class="arch-tech-grid">
+                        <div class="arch-box">
+                            <div class="arch-icon"><i data-lucide="smartphone"></i></div>
+                            <h4>Frontend Flutter</h4>
+                            <p>Interface responsiva em Material 3 com Design System unificado de Clean UI e Glassmorphism.</p>
+                        </div>
+                        
+                        <div class="arch-box">
+                            <div class="arch-icon"><i data-lucide="server"></i></div>
+                            <h4>FastAPI Backend</h4>
+                            <p>API Python assíncrona focada em latência crítica, roteamento rápido de webhooks e background workers.</p>
+                        </div>
+                        
+                        <div class="arch-box">
+                            <div class="arch-icon"><i data-lucide="database"></i></div>
+                            <h4>PostgreSQL Relacional</h4>
+                            <p>Banco transacional de alta integridade relacional, integrado com recursos de indexação rápida.</p>
+                        </div>
+                        
+                        <div class="arch-box">
+                            <div class="arch-icon"><i data-lucide="bell-ring"></i></div>
+                            <h4>Real-Time & FCM</h4>
+                            <p>Firebase Cloud Messaging e Webhooks altamente otimizados para sincronizar sistemas em < 2s.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-right visual-content">
+                    <div class="glass-card arch-diagram-card">
+                        <div class="card-header">
+                            <i data-lucide="git-fork"></i>
+                            <span>Fluxo de Dados & Microsserviços</span>
+                        </div>
+                        <div class="card-body">
+                            <!-- Visual architecture scheme -->
+                            <div class="arch-diagram-visual">
+                                <div class="diagram-column">
+                                    <div class="diag-node phone-node">
+                                        <i data-lucide="message-square"></i>
+                                        <span>WhatsApp UI</span>
+                                    </div>
+                                    <div class="diag-node phone-node flutter-node">
+                                        <i data-lucide="smartphone"></i>
+                                        <span>Flutter App</span>
+                                    </div>
+                                </div>
+                                <div class="diagram-connectors">
+                                    <div class="conn-arrow right"></div>
+                                    <div class="conn-arrow left"></div>
+                                </div>
+                                <div class="diagram-column main-core">
+                                    <div class="diag-node api-node">
+                                        <div class="glow-ring"></div>
+                                        <i data-lucide="cpu"></i>
+                                        <span>FastAPI Core (Async)</span>
+                                    </div>
+                                    <div class="sub-nodes">
+                                        <div class="sub-node-box">LangGraph</div>
+                                        <div class="sub-node-box">Moderação</div>
+                                    </div>
+                                </div>
+                                <div class="diagram-connectors">
+                                    <div class="conn-arrow right"></div>
+                                    <div class="conn-arrow left"></div>
+                                </div>
+                                <div class="diagram-column">
+                                    <div class="diag-node db-node">
+                                        <i data-lucide="database"></i>
+                                        <span>PostgreSQL</span>
+                                    </div>
+                                    <div class="diag-node vector-node">
+                                        <i data-lucide="milestone"></i>
+                                        <span>Vector DB (RAG)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="speech-script" style="display: none;">
+                "Para os investidores técnicos, nossa pilha arquitetural foi desenhada para escalabilidade horizontal e latência crítica de sub-segundo. O frontend é construído em Flutter sob a especificação Material 3 com nosso próprio Design System unificado. O backend utiliza FastAPI assíncrono para lidar com centenas de requisições de webhooks concorrentes por segundo. O armazenamento transacional baseia-se em PostgreSQL, permitindo integridade referencial rígida, enquanto a indexação e busca vetorial de documentos técnicos e FAQs garantem que a IA responda sempre com precisão cirúrgica."
+            </div>
+        </section>
+
+        <!-- Slide 5: O Cérebro -->
+        <section id="slide5" class="slide-section" data-slide="5">
+            <div class="slide-background"></div>
+            <div class="slide-content-wrapper grid-2-cols">
+                <div class="slide-left text-content">
+                    <span class="badge badge-accent">🧠 Inteligência Conversacional</span>
+                    <h1 class="slide-title">RAG Contextual Avançado e Anti-Alucinação</h1>
+                    <p class="slide-description">IA clínica não pode falhar. Implementamos mecanismos rigorosos no pipeline LangChain e LangGraph para garantir obediência absoluta ao contexto médico.</p>
+                    
+                    <div class="brain-tech-items">
+                        <div class="brain-tech-item">
+                            <h4><i data-lucide="network"></i> Orquestração LangGraph</h4>
+                            <p>Controle estrito de estado conversacional para impedir a troca de papéis entre a IA Isis (triagem) e o médico, mantendo fluxos focados.</p>
+                        </div>
+                        <div class="brain-tech-item">
+                            <h4><i data-lucide="shield-check"></i> RAG Pipeline com Vetores</h4>
+                            <p>Indexação e recuperação de regras da clínica, termos e agendas legítimas. Respostas baseadas em fatos, sem espaço para invenções.</p>
+                        </div>
+                        <div class="brain-tech-item">
+                            <h4><i data-lucide="refresh-cw"></i> Protocolo Anti-Alucinação de Sessão</h4>
+                            <p>Sinalização dinâmica <code>new_session: true</code> enviada pelo Flutter que zera o <code>MemorySaver</code> no backend, eliminando ruídos passados.</p>
+                        </div>
+                        <div class="brain-tech-item">
+                            <h4><i data-lucide="zap"></i> Fast-Track de Saudação</h4>
+                            <p>Interceptação de mensagens de boas-vindas com saudações locais imediatas, reduzindo custos de API e latência da LLM a zero.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-right visual-content">
+                    <!-- RAG ANTI-HALLUCINATION PLAYGROUND -->
+                    <div class="glass-card rag-sandbox">
+                        <div class="card-header">
+                            <i data-lucide="brain-circuit"></i>
+                            <span>Visualizador de Memória RAG & Sessão</span>
+                            <button class="btn btn-outline btn-sm" id="btnResetSession">
+                                <i data-lucide="refresh-cw"></i> new_session: true
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="rag-visualizer">
+                                <div class="memory-buffer-panel">
+                                    <h4>Memória Ativa (MemorySaver)</h4>
+                                    <div class="memory-logs" id="memoryLogs">
+                                        <div class="log-item"><code>[SYSTEM]</code>: Role = Isis Assistant (Triagem)</div>
+                                        <div class="log-item"><code>[USER]</code>: Sinto febre e dor de cabeça há 2 dias.</div>
+                                        <div class="log-item"><code>[CONTEXT]</code>: Triagem de sintomas em andamento.</div>
+                                        <div class="log-item highlight-log"><code>[LEAK WARNING]</code>: Sessão antiga. Contexto pode se misturar se não resetado!</div>
+                                    </div>
+                                </div>
+                                <div class="rag-flow-status">
+                                    <div class="rag-node-box active" id="ragNodeRetrieve">Retrieval (Vetor PostgreSQL)</div>
+                                    <div class="rag-line"></div>
+                                    <div class="rag-node-box active" id="ragNodeAntiHallucinate">Filtro de Alucinação</div>
+                                    <div class="rag-line"></div>
+                                    <div class="rag-node-box active" id="ragNodeLLM">Llama-3.3 LLM</div>
+                                </div>
+                            </div>
+                            <div class="rag-feedback-alert" id="ragStatusText">Atenção: Carregar nova visualização sem a flag de reset pode confundir a IA! Clique em <strong>new_session: true</strong> para ver o reset de segurança da memória em ação.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="speech-script" style="display: none;">
+                "Nossa IA não alucina. Nós implementamos um pipeline RAG robusto com LangChain e LangGraph, garantindo que o assistente Isis saiba exatamente que é uma paciente simulada ou assistente de triagem, sem misturar os papéis com o médico. Para evitar o clássico problema de 'histórico sujo' quando a página do app é recarregada, desenvolvemos um Protocolo Anti-Alucinação: o Flutter envia a flag 'new_session', limpando retroativamente a memória no backend antes de processar. Além disso, criamos um Fast-Track de Saudação com latência zero, contornando a chamada da LLM para mensagens triviais de boas-vindas."
+            </div>
+        </section>
+
+        <!-- Slide 6: Moderação de Segurança -->
+        <section id="slide6" class="slide-section" data-slide="6">
+            <div class="slide-background"></div>
+            <div class="slide-content-wrapper grid-2-cols">
+                <div class="slide-left text-content">
+                    <span class="badge badge-danger">🛡️ Moderação & LGPD</span>
+                    <h1 class="slide-title">Segurança Baseada em Moderação Multimodal</h1>
+                    <p class="slide-description">Estabelecemos um serviço de moderação avançado com tolerância zero, interceptando e neutralizando conteúdo impróprio antes de atingir nossos servidores de banco de dados.</p>
+                    
+                    <div class="security-pillars">
+                        <div class="security-pillar">
+                            <span class="pillar-num">01</span>
+                            <div>
+                                <h4>Filtro de Entrada Multimodal</h4>
+                                <p>Intercepta textos, áudios e imagens em tempo real usando Llama-3.3-70B e Llama-Vision-11B na API de entrada.</p>
+                            </div>
+                        </div>
+                        <div class="security-pillar">
+                            <span class="pillar-num">02</span>
+                            <div>
+                                <h4>Exceção Clínica Dinâmica</h4>
+                                <p>A IA é inteligente: sabe liberar termos médicos legítimos ou fotos de lesões dermatológicas necessárias para triagem, rejeitando conteúdo ilícito de verdade.</p>
+                            </div>
+                        </div>
+                        <div class="security-pillar">
+                            <span class="pillar-num">03</span>
+                            <div>
+                                <h4>Mascaramento no PostgreSQL</h4>
+                                <p>Mensagens ofensivas ou ilícitas são criptografadas e salvas no banco físico mascaradas como <code>[MENSAGEM BLOQUEADA PELO FILTRO DE SEGURANÇA]</code>, atendendo à conformidade total com a LGPD clínica.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-right visual-content">
+                    <!-- CONTENT MODERATION INTERACTIVE SANDBOX -->
+                    <div class="glass-card moderation-sandbox">
+                        <div class="card-header">
+                            <i data-lucide="shield-alert" class="red-icon"></i>
+                            <span>Console do Filtro de Moderação e Segurança</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="moderation-controls">
+                                <p class="control-desc">Selecione uma entrada para simular o comportamento da API:</p>
+                                <div class="mod-buttons-row">
+                                    <button class="btn btn-sm btn-outline mod-sim-btn" data-text="Estou com manchas avermelhadas nas costas e coceira intensa. [Imagem Dermatológica]" data-type="clinical">🩺 Caso Clínico Legítimo</button>
+                                    <button class="btn btn-sm btn-outline mod-sim-btn" data-text="Prescrever 500mg de Dipirona para o paciente João." data-type="clinical-prescription">💊 Prescrição Médica</button>
+                                    <button class="btn btn-sm btn-outline mod-sim-btn" data-type="harmful" data-text="Links maliciosos de spam e fraude financeira!">🚨 Conteúdo Ofensivo / Spam</button>
+                                </div>
+                                
+                                <div class="custom-input-group">
+                                    <input type="text" id="customModInput" placeholder="Digite uma mensagem para simular o filtro..." class="form-control">
+                                    <button class="btn btn-primary" id="btnTestMod">Analisar</button>
+                                </div>
+                            </div>
+                            
+                            <div class="moderation-results-panel">
+                                <div class="result-box">
+                                    <span class="result-label">Status da Análise (LLama Mod)</span>
+                                    <div class="result-badge" id="modStatusBadge">Aguardando Entrada</div>
+                                </div>
+                                <div class="result-box">
+                                    <span class="result-label">Salvo no PostgreSQL (Conformidade LGPD)</span>
+                                    <div class="result-db-value" id="modDbValue">-</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="speech-script" style="display: none;">
+                "Segurança de dados e conformidade com a LGPD são inegociáveis na saúde. Implementamos um Content Moderation Service multimodal avançado. Se um usuário enviar uma imagem inadequada ou texto tóxico, o sistema intercepta antes de salvar no disco, mascara a mensagem no PostgreSQL como 'MENSAGEM BLOQUEADA' e devolve um aviso de segurança amigável. Contudo, nossa IA possui sensibilidade clínica: ela sabe diferenciar uma foto inadequada de uma imagem dermatológica real ou um termo anatômico legítimo, garantindo que a triagem médica continue fluindo perfeitamente."
+            </div>
+        </section>
+
+        <!-- Slide 7: Nosso Diferencial de IP -->
+        <section id="slide7" class="slide-section" data-slide="7">
+            <div class="slide-background"></div>
+            <div class="slide-content-wrapper grid-2-cols">
+                <div class="slide-left text-content">
+                    <span class="badge badge-accent">⚙️ Propriedade Intelectual (IP)</span>
+                    <h1 class="slide-title">Time de Desenvolvimento Multiagente Autônomo</h1>
+                    <p class="slide-description">Nosso maior diferencial estratégico está no próprio ecossistema de engenharia de software da Sua Consulta: o desenvolvimento do projeto é acelerado e testado por agentes autônomos.</p>
+                    
+                    <div class="agent-features">
+                        <div class="agent-feature-item">
+                            <i data-lucide="terminal"></i>
+                            <div>
+                                <h4>Orquestrador Central Omniconnect</h4>
+                                <p>Mapeado no arquivo de arquitetura <code>orchestrate-omniconnect.md</code>, desmembra os requisitos em subtarefas estruturadas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="agent-feature-item">
+                            <i data-lucide="layers"></i>
+                            <div>
+                                <h4>Registry de Agentes Especialistas</h4>
+                                <p>Agentes focados em FastAPI (Back), Flutter (Front), QA (Testes automatizados de estresse) e Banco de Dados.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="agent-feature-item">
+                            <i data-lucide="code"></i>
+                            <div>
+                                <h4>Execução em Loop de Erro</h4>
+                                <p>Os agentes executam testes unitários e corrigem a si mesmos de forma autônoma baseados em logs de falha antes de realizar o deploy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-right visual-content">
+                    <!-- INTERACTIVE MULTI-AGENT GRAPH -->
+                    <div class="glass-card agents-widget">
+                        <div class="card-header">
+                            <i data-lucide="users"></i>
+                            <span>Ecosistema Multiagente Sua Consulta</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="agent-graph-area">
+                                <div class="agent-center-node" id="agentOrchestrator">
+                                    <div class="pulse-ring"></div>
+                                    <span>Orquestrador Central</span>
+                                </div>
+                                
+                                <div class="agent-satellite-nodes">
+                                    <div class="sat-node" data-agent="backend" id="satBackend">FastAPI Engine</div>
+                                    <div class="sat-node" data-agent="db" id="satDB">Database Architect</div>
+                                    <div class="sat-node" data-agent="frontend" id="satFrontend">Flutter Agent</div>
+                                    <div class="sat-node" data-agent="qa" id="satQA">QA Test Engineer</div>
+                                </div>
+                            </div>
+                            <div class="agent-detail-panel" id="agentDetailPanel">
+                                <h4>Clique em qualquer nó dos agentes especializados para ver sua atribuição no ecossistema e seu código gerado.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="speech-script" style="display: none;">
+                "O nosso maior diferencial tecnológico (IP) está na forma como construímos e evoluímos a Sua Consulta. Nós criamos um Orquestrador Multiagente interno. A partir de diretrizes técnicas declaradas em markdown, um roteador de IA distribui tarefas, mapeia dependências e aciona engenheiros de IA dedicados para codificar o backend, criar os schemas do banco, programar as telas no Flutter, realizar testes unitários e revisar o código. Isso nos permite escalar novos recursos a uma velocidade 5 vezes maior que uma equipe tradicional de desenvolvimento, reduzindo drasticamente nosso custo de engenharia de software."
+            </div>
+        </section>
+
+        <!-- Slide 8: O Produto na Prática (UX) -->
+        <section id="slide8" class="slide-section" data-slide="8">
+            <div class="slide-background"></div>
+            <div class="slide-content-wrapper grid-2-cols">
+                <div class="slide-left text-content">
+                    <span class="badge badge-accent">🎨 Interface de Alta Fidelidade</span>
+                    <h1 class="slide-title">Interface Premium, Clean UI & UX</h1>
+                    <p class="slide-description">Nosso Design System reflete os padrões mais modernos do Google Material 3 com efeitos sutis de transparência (Glassmorphism), criando conforto no uso diário do médico.</p>
+                    
+                    <div class="design-system-specs">
+                        <div class="spec-pill"><span class="color-dot primary-blue-dark"></span> <span>Dark Blue: #001D39</span></div>
+                        <div class="spec-pill"><span class="color-dot primary-blue"></span> <span>Primary: #0A4174</span></div>
+                        <div class="spec-pill"><span class="color-dot primary-blue-light"></span> <span>Light Blue: #BDD8E9</span></div>
+                        <div class="spec-pill"><span class="color-dot accent-blue"></span> <span>Accent: #7BBDE8</span></div>
+                    </div>
+
+                    <div class="ui-highlights">
+                        <div class="ui-highlight-item">
+                            <i data-lucide="calendar"></i>
+                            <div>
+                                <h4>Agenda Inteligente</h4>
+                                <p>Exibição fluida de atendimentos ordenados por prioridade e classificação de sintoma estruturada pela IA Isis.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="ui-highlight-item">
+                            <i data-lucide="bar-chart-2"></i>
+                            <div>
+                                <h4>Dashboard Financeira do Médico</h4>
+                                <p>Consolidação imediata de ganhos por convênio, particular, ticket médio e tempo médio de consulta.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-right visual-content">
+                    <!-- DYNAMIC FINANCIAL DASHBOARD PREVIEW -->
+                    <div class="glass-card dashboard-financial-card">
+                        <div class="card-header">
+                            <i data-lucide="wallet"></i>
+                            <span>CRM & Dashboard de Gestão Sua Consulta</span>
+                            <span class="month-pill">Maio 2026</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="dashboard-grid">
+                                <div class="dash-stat">
+                                    <span class="label">Receita Consolidada</span>
+                                    <span class="value accent-text">R$ 38.450,00</span>
+                                    <span class="subtext green-text">▲ +14% em relação ao mês anterior</span>
+                                </div>
+                                <div class="dash-stat">
+                                    <span class="label">Consultas Realizadas</span>
+                                    <span class="value">154</span>
+                                    <span class="subtext">Faltas reduzidas de 35% para 8%</span>
+                                </div>
+                            </div>
+                            
+                            <div class="dashboard-chart-visual">
+                                <span class="chart-title-sub">Fluxo de Faturamento Semanal (Milhares R$)</span>
+                                <div class="chart-svg-container">
+                                    <!-- Beautiful Custom Interactive SVG Chart -->
+                                    <svg viewBox="0 0 400 150" class="svg-chart">
+                                        <defs>
+                                            <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                                                <stop offset="0%" stop-color="#7BBDE8" stop-opacity="0.5"/>
+                                                <stop offset="100%" stop-color="#0A4174" stop-opacity="0.0"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <!-- Grid lines -->
+                                        <line x1="0" y1="30" x2="400" y2="30" class="grid-line" stroke="#1E3A5F" stroke-dasharray="4"/>
+                                        <line x1="0" y1="70" x2="400" y2="70" class="grid-line" stroke="#1E3A5F" stroke-dasharray="4"/>
+                                        <line x1="0" y1="110" x2="400" y2="110" class="grid-line" stroke="#1E3A5F" stroke-dasharray="4"/>
+                                        
+                                        <!-- Area under curve -->
+                                        <path d="M 0 150 Q 80 120 100 100 T 200 60 T 300 80 T 400 40 L 400 150 Z" fill="url(#chartGrad)"/>
+                                        
+                                        <!-- Curve line -->
+                                        <path d="M 0 150 Q 80 120 100 100 T 200 60 T 300 80 T 400 40" fill="none" stroke="#7BBDE8" stroke-width="3" class="chart-curve-path"/>
+                                        
+                                        <!-- Interactive Dots -->
+                                        <circle cx="100" cy="100" r="5" fill="#7BBDE8" class="chart-dot" data-val="R$ 8.200"/>
+                                        <circle cx="200" cy="60" r="5" fill="#7BBDE8" class="chart-dot" data-val="R$ 11.500"/>
+                                        <circle cx="300" cy="80" r="5" fill="#7BBDE8" class="chart-dot" data-val="R$ 9.100"/>
+                                        <circle cx="400" cy="40" r="5" fill="#7BBDE8" class="chart-dot" data-val="R$ 12.650"/>
+                                        
+                                        <!-- Labels -->
+                                        <text x="100" y="140" fill="#BDD8E9" font-size="10" text-anchor="middle">Semana 1</text>
+                                        <text x="200" y="140" fill="#BDD8E9" font-size="10" text-anchor="middle">Semana 2</text>
+                                        <text x="300" y="140" fill="#BDD8E9" font-size="10" text-anchor="middle">Semana 3</text>
+                                        <text x="390" y="140" fill="#BDD8E9" font-size="10" text-anchor="end">Semana 4</text>
+                                    </svg>
+                                </div>
+                                <div class="chart-tooltip" id="chartTooltip">Passe o mouse nos pontos para ver o valor</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="speech-script" style="display: none;">
+                "O médico não quer lidar com softwares complexos; ele quer uma agenda organizada, controle de faturamento claro e zero dor de cabeça. Nós criamos uma interface minimalista seguindo conceitos de Clean UI e Glassmorphism em Flutter. O aplicativo Sua Consulta oferece ao médico uma tela onde os atendimentos triados pela IA chegam com tags de prioridade e exames pré-processados. Nosso Design System unificado garante que toda a interação no app seja suave e acessível para qualquer usuário leigo, acelerando a adoção do produto nas clínicas."
+            </div>
+        </section>
+
+        <!-- Slide 9: Fluxo de Dados Ponta a Ponta -->
+        <section id="slide9" class="slide-section" data-slide="9">
+            <div class="slide-background"></div>
+            <div class="slide-content-wrapper grid-2-cols">
+                <div class="slide-left text-content">
+                    <span class="badge badge-accent">🔄 Engenharia de Sistemas</span>
+                    <h1 class="slide-title">Diagrama de Sequência e Pipeline de Execução</h1>
+                    <p class="slide-description">Esta é a jornada detalhada que as mensagens e os arquivos de áudio percorrem até o app em Flutter, processados com alta segurança e sincronizados abaixo de 2 segundos.</p>
+                    
+                    <div class="pipeline-steps">
+                        <div class="pipeline-step">
+                            <span class="step-badge">1</span>
+                            <div>
+                                <h4>Entrada do Evento (WhatsApp Cloud API)</h4>
+                                <p>Paciente envia mensagem ou arquivo de áudio relatando sintomas.</p>
+                            </div>
+                        </div>
+                        <div class="pipeline-step">
+                            <span class="step-badge">2</span>
+                            <div>
+                                <h4>Processamento & Moderação de Segurança</h4>
+                                <p>Transcrição assíncrona do áudio via Groq/Whisper, avaliação de conformidade da moderação multimodal (Llama Mod) e validação clínica.</p>
+                            </div>
+                        </div>
+                        <div class="pipeline-step">
+                            <span class="step-badge">3</span>
+                            <div>
+                                <h4>Busca Vetorial & LangGraph Core</h4>
+                                <p>RAG resgata histórico, regras de planos de saúde, insere intenções estruturadas no PostgreSQL e zera estado se necessário.</p>
+                            </div>
+                        </div>
+                        <div class="pipeline-step">
+                            <span class="step-badge">4</span>
+                            <div>
+                                <h4>Push FCM & Dashboard Real-Time</h4>
+                                <p>Notificação enviada por Firebase Cloud Messaging atualiza o painel clínico no Flutter em tempo recorde.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-right visual-content">
+                    <div class="glass-card sequence-diagram-card">
+                        <div class="card-header">
+                            <i data-lucide="shuffle"></i>
+                            <span>Diagrama de Sequência em Tempo Real</span>
+                        </div>
+                        <div class="card-body">
+                            <!-- Visual Sequence Diagram Grid -->
+                            <div class="sequence-grid">
+                                <div class="seq-actor">Paciente</div>
+                                <div class="seq-actor">FastAPI Backend</div>
+                                <div class="seq-actor">Pipeline IA</div>
+                                <div class="seq-actor">App Flutter</div>
+                                
+                                <!-- Life lines -->
+                                <div class="seq-line"></div>
+                                <div class="seq-line"></div>
+                                <div class="seq-line"></div>
+                                <div class="seq-line"></div>
+                                
+                                <!-- Message arrows -->
+                                <div class="seq-msg" style="top: 50px; left: 12%; width: 25%;">
+                                    <span class="msg-text">1. Áudio / WhatsApp</span>
+                                    <div class="msg-arrow-head"></div>
+                                </div>
+                                <div class="seq-msg" style="top: 80px; left: 37%; width: 25%;">
+                                    <span class="msg-text">2. Transcrição & RAG</span>
+                                    <div class="msg-arrow-head"></div>
+                                </div>
+                                <div class="seq-msg backward" style="top: 110px; left: 37%; width: 25%;">
+                                    <span class="msg-text">3. Estruturação</span>
+                                    <div class="msg-arrow-head"></div>
+                                </div>
+                                <div class="seq-msg" style="top: 140px; left: 37%; width: 50%;">
+                                    <span class="msg-text">4. Notificação Push FCM (&lt; 2s)</span>
+                                    <div class="msg-arrow-head"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="speech-script" style="display: none;">
+                "Vejam o fluxo em tempo de execução: o paciente envia um áudio descrevendo um sintoma no WhatsApp. O webhook assíncrono do FastAPI recebe o arquivo de áudio, transcreve em milissegundos via Groq/Whisper e processa o texto. A nossa moderação avalia a segurança, e o RAG local extrai a intenção do paciente. O banco de dados PostgreSQL é atualizado com o novo agendamento pendente e o Firebase envia uma notificação instantânea para o celular do médico. Todo esse pipeline complexo de IA e infraestrutura roda abaixo de 2 segundos."
+            </div>
+        </section>
+
+        <!-- Slide 10: Oportunidade & Roadmap -->
+        <section id="slide10" class="slide-section" data-slide="10">
+            <div class="slide-background"></div>
+            <div class="slide-content-wrapper grid-2-cols">
+                <div class="slide-left text-content">
+                    <span class="badge badge-success">🗺️ Escalabilidade & Futuro</span>
+                    <h1 class="slide-title">Mercado de SaaS Médico & Roadmap de Produto</h1>
+                    <p class="slide-description">Entramos em um mercado de rápido crescimento, com mais de 500 mil médicos ativos no país e forte adesão à telemedicina e IA operacional.</p>
+                    
+                    <div class="roadmap-timeline">
+                        <div class="timeline-item">
+                            <div class="time-marker">Q3 2026</div>
+                            <div class="time-content">
+                                <h4>Integração Nativa com Laboratórios</h4>
+                                <p>Parceria com Fleury e DASA para processamento automático de laudos de exames por visão computacional da IA.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="time-marker">Q4 2026</div>
+                            <div class="time-content">
+                                <h4>Telemedicina Integrada com IA</h4>
+                                <p>Sessões de vídeo direto no app Flutter, com a IA gerando resumos automatizados prontos para o prontuário.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="time-marker">Q1 2027</div>
+                            <div class="time-content">
+                                <h4>Módulo Administrativo Multi-Clínicas</h4>
+                                <p>Expansão SaaS para atender redes de franquias, unificando faturamento e controle de prestadores.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-right visual-content">
+                    <div class="glass-card tam-market-card">
+                        <div class="card-header">
+                            <i data-lucide="pie-chart"></i>
+                            <span>Oportunidade e Mercado Endereçável (TAM)</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="market-circles">
+                                <div class="market-circle tam">
+                                    <span class="market-label">TAM</span>
+                                    <span class="market-val">R$ 5.4 Bilhões</span>
+                                    <span class="market-detail">Mercado global de software médico nacional</span>
+                                </div>
+                                <div class="market-circle sam">
+                                    <span class="market-label">SAM</span>
+                                    <span class="market-val">R$ 1.2 Bilhões</span>
+                                    <span class="market-detail">SaaS para clínicas de médio/grande porte</span>
+                                </div>
+                                <div class="market-circle som">
+                                    <span class="market-label">SOM</span>
+                                    <span class="market-val">R$ 180 Milhões</span>
+                                    <span class="market-detail">Foco inicial em clínicas premium</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="speech-script" style="display: none;">
+                "Nossa oportunidade de mercado é massiva. Com mais de 500 mil médicos ativos no país, o mercado de SaaS de saúde está maduro para soluções orientadas a IA. O roadmap técnico do Sua Consulta está desenhado para ir muito além de agendamentos. No próximo trimestre, integraremos nossa API diretamente aos sistemas dos grandes laboratórios de exames clínicos, permitindo que a IA importe e analise os laudos médicos automaticamente. No final do ano, lançaremos nossa ferramenta nativa de telemedicina, onde a IA ouve a consulta de vídeo e digita o prontuário para o médico em tempo real, em conformidade com as regras da LGPD e do CFM."
+            </div>
+        </section>
+
+        <!-- Slide 11: Proposta de Investimento -->
+        <section id="slide11" class="slide-section" data-slide="11">
+            <div class="slide-background"></div>
+            <div class="slide-content-wrapper grid-2-cols">
+                <div class="slide-left text-content">
+                    <span class="badge badge-accent">📈 Captação & Finanças</span>
+                    <h1 class="slide-title">Investimento Estratégico: Rodada Pre-Seed</h1>
+                    <p class="slide-description">Estamos captando recursos para impulsionar a engenharia de software da Sua Consulta, solidificar patentes e acelerar a captação de clientes clínicos de alta renda.</p>
+                    
+                    <div class="investment-stats">
+                        <div class="inv-stat-box">
+                            <span class="inv-label">Investimento Alvo</span>
+                            <span class="inv-val gradient-text">R$ 1.5M</span>
+                            <span class="inv-sub">Pre-Seed / 10% Equity</span>
+                        </div>
+                        <div class="inv-stat-box">
+                            <span class="inv-label">Break-even Estimado</span>
+                            <span class="inv-val text-primary-light">14 Meses</span>
+                            <span class="inv-sub">Projeção conservadora de MRR</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-right visual-content">
+                    <div class="glass-card funds-allocation-card">
+                        <div class="card-header">
+                            <i data-lucide="pie-chart"></i>
+                            <span>Alocação de Recursos Captados</span>
+                        </div>
+                        <div class="card-body">
+                            <!-- High End Allocation Blocks -->
+                            <div class="allocation-bars">
+                                <div class="alloc-bar-group">
+                                    <div class="alloc-label-row">
+                                        <span>🚀 Engenharia de Produto & IA</span>
+                                        <strong>60%</strong>
+                                    </div>
+                                    <div class="alloc-progress-bar">
+                                        <div class="alloc-fill primary-fill" style="width: 60%;"></div>
+                                    </div>
+                                    <p class="alloc-desc">Evolução do time multiagente, modelos multimodais de diagnóstico e novos recursos do app Flutter.</p>
+                                </div>
+                                
+                                <div class="alloc-bar-group">
+                                    <div class="alloc-label-row">
+                                        <span>💼 Go-To-Market & Aquisição</span>
+                                        <strong>25%</strong>
+                                    </div>
+                                    <div class="alloc-progress-bar">
+                                        <div class="alloc-fill secondary-fill" style="width: 25%;"></div>
+                                    </div>
+                                    <p class="alloc-desc">Equipe comercial focada em parcerias estratégicas em grandes centros urbanos.</p>
+                                </div>
+                                
+                                <div class="alloc-bar-group">
+                                    <div class="alloc-label-row">
+                                        <span>⚖️ Conformidade e Regulatório (LGPD)</span>
+                                        <strong>15%</strong>
+                                    </div>
+                                    <div class="alloc-progress-bar">
+                                        <div class="alloc-fill accent-fill" style="width: 15%;"></div>
+                                    </div>
+                                    <p class="alloc-desc">Segurança clínica de dados e blindagem jurídica conforme normas do CFM.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="speech-script" style="display: none;">
+                "Para acelerar esta visão, estamos abrindo nossa rodada Pre-Seed de 1,5 milhão de reais. Alocaremos 60% desse valor na contratação de engenheiros seniores de IA e mobile para expandir nossas ferramentas proprietárias de automação de desenvolvimento multiagente e nosso pipeline de visão computacional para exames. 25% serão destinados para nosso Go-To-Market em clínicas premium e os 15% restantes garantirão a blindagem jurídica e conformidade regulatória. Convidamos vocês a se juntarem a nós na transformação da gestão de saúde através da IA orquestrada."
+            </div>
+        </section>
+
+        <!-- Slide 12: Encerramento -->
+        <section id="slide12" class="slide-section" data-slide="12">
+            <div class="slide-background"></div>
+            <div class="slide-content-wrapper grid-2-cols">
+                <div class="slide-left text-content">
+                    <span class="badge badge-accent">🤝 Junte-se a nós</span>
+                    <h1 class="slide-title gradient-text">Sua Consulta</h1>
+                    <h2 class="slide-subtitle">O Futuro da Gestão de Clínicas Médicas por IA</h2>
+                    <p class="slide-description">Estamos prontos para liderar a próxima geração de ecossistemas operacionais de saúde. Convidamos você a fazer parte dessa revolução.</p>
+                    
+                    <div class="contact-info-grid">
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <div>
+                                <span>E-mail</span>
+                                <strong>contato@suaconsulta.com.br</strong>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <div>
+                                <span>Telefone</span>
+                                <strong>+55 (11) 99999-9999</strong>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="external-link"></i>
+                            <div>
+                                <span>Acesse os Documentos</span>
+                                <strong><a href="file:///c:/Programacao/Alpha/Desafio_final_Flutter/docs/projeto_desafio_final.md" class="docs-link" target="_blank">Documentação Técnica</a></strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-right visual-content">
+                    <div class="glass-card qa-card">
+                        <div class="card-header">
+                            <i data-lucide="help-circle"></i>
+                            <span>Q&A - Sessão de Perguntas</span>
+                        </div>
+                        <div class="card-body qa-body">
+                            <div class="qa-graphic">
+                                <div class="qa-bubble left">Qual a maior barreira de entrada técnica que vocês resolveram?</div>
+                                <div class="qa-bubble right">Sem dúvidas, a moderação clínica multimodal em tempo real combinada com latência abaixo de 2s pelo FCM.</div>
+                            </div>
+                            <div class="qa-cta">
+                                <h3>Muito Obrigado!</h3>
+                                <p>Sinta-se à vontade para levantar suas dúvidas sobre infraestrutura, RAG ou orquestração multiagentes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="speech-script" style="display: none;">
+                "Agradeço o tempo de todos vocês. O Sua Consulta não é apenas uma ideia, é uma arquitetura funcional de alto rendimento rodando hoje. Estamos prontos para responder às suas perguntas técnicas sobre nossa infraestrutura de microsserviços, os modelos LLM de moderação e a nossa orquestração multiagentes. Muito obrigado!"
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FLOATING PRESENTATION CONTROLS (ONLY SHOWS IN PRESENTATION MODE) -->
+    <div class="presentation-controls" id="presentationControls">
+        <button class="nav-btn prev-btn" id="prevBtn" title="Slide Anterior (Seta Esquerda)">
+            <i data-lucide="chevron-left"></i>
+        </button>
+        
+        <div class="slides-indicator">
+            <span id="currentSlideLabel">1</span> / 12
+        </div>
+
+        <button class="nav-btn next-btn" id="nextBtn" title="Próximo Slide (Seta Direita)">
+            <i data-lucide="chevron-right"></i>
+        </button>
+        
+        <!-- Toggle Speech Notes Drawer Button -->
+        <button class="btn btn-outline btn-notes" id="notesToggleBtn" title="Ver Notas de Fala do Apresentador">
+            <i data-lucide="file-text"></i> Notes
+        </button>
+    </div>
+
+    <!-- PRESENTATION NOTES DRAWER -->
+    <div class="notes-drawer" id="notesDrawer">
+        <div class="drawer-header">
+            <h3><i data-lucide="mic"></i> Roteiro de Fala do Apresentador</h3>
+            <button class="btn-close" id="notesCloseBtn" title="Fechar Notas">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        <div class="drawer-body">
+            <p id="speechScriptContent">Notas de fala para o slide atual aparecerão aqui.</p>
+        </div>
+    </div>
+
+    <!-- LANDING PAGE FLOATING NAVIGATION (ONLY SHOWS IN LANDING MODE) -->
+    <div class="landing-nav" id="landingNav">
+        <ul>
+            <li><a href="#slide1" class="active" data-slide="1">1. Sua Consulta</a></li>
+            <li><a href="#slide2" data-slide="2">2. O Problema</a></li>
+            <li><a href="#slide3" data-slide="3">3. A Solução</a></li>
+            <li><a href="#slide4" data-slide="4">4. Arquitetura</a></li>
+            <li><a href="#slide5" data-slide="5">5. RAG & IA</a></li>
+            <li><a href="#slide6" data-slide="6">6. Moderação</a></li>
+            <li><a href="#slide7" data-slide="7">7. Multiagentes</a></li>
+            <li><a href="#slide8" data-slide="8">8. Dashboard UX</a></li>
+            <li><a href="#slide9" data-slide="9">9. Fluxo de Dados</a></li>
+            <li><a href="#slide10" data-slide="10">10. Mercado</a></li>
+            <li><a href="#slide11" data-slide="11">11. Captação</a></li>
+            <li><a href="#slide12" data-slide="12">12. Encerramento</a></li>
+        </ul>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

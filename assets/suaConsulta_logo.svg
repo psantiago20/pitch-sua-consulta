@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100%" height="100%">
+    <!-- Círculo Azul Vívido -->
+    <circle cx="12" cy="12" r="12" fill="#0A59E4" />
+    
+    <!-- Ícone health_and_safety na cor branca -->
+    <!-- Escalado levemente (0.7) e centralizado para caber perfeitamente dentro do círculo -->
+    <g transform="translate(3.6, 3.6) scale(0.7)">
+        <path d="M10.5 13H8v-3h2.5V7.5h3V10H16v3h-2.5v2.5h-3V13zM12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z" fill="#FFFFFF"/>
+    </g>
+</svg>
