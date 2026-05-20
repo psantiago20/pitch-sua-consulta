@@ -487,18 +487,20 @@ async def test_webhook_latency_threshold():
         });
     });
 
-    agentOrchestrator.addEventListener('click', () => {
-        // Highlight all
-        satNodes.forEach(n => n.classList.add('active'));
-        agentDetailPanel.innerHTML = `
-            <h4>🧠 Orquestrador Central Multiagente</h4>
-            <p><strong>Arquivo de IP:</strong> <code>orchestrate-omniconnect.md</code></p>
-            <p>Atua como o engenheiro-gerente autônomo. Ele traduz especificações escritas em Markdown, divide os épicos em tarefas técnicas (FastAPI, Flutter widgets, schemas, scripts de teste) e delega para os agentes especialistas correspondentes no registry, validando saídas em loops autorreguláveis.</p>
-            <div style="margin-top:0.8rem; font-size: 0.8rem; color: var(--accent-blue)">
-                ⚡ Velocidade de entrega 5x maior que times analógicos.
-            </div>
-        `;
-    });
+    if (agentOrchestrator) {
+        agentOrchestrator.addEventListener('click', () => {
+            // Highlight all
+            satNodes.forEach(n => n.classList.add('active'));
+            agentDetailPanel.innerHTML = `
+                <h4>🧠 Orquestrador Central Multiagente</h4>
+                <p><strong>Arquivo de IP:</strong> <code>orchestrate-omniconnect.md</code></p>
+                <p>Atua como o engenheiro-gerente autônomo. Ele traduz especificações escritas em Markdown, divide os épicos em tarefas técnicas (FastAPI, Flutter widgets, schemas, scripts de teste) e delega para os agentes especialistas correspondentes no registry, validando saídas em loops autorreguláveis.</p>
+                <div style="margin-top:0.8rem; font-size: 0.8rem; color: var(--accent-blue)">
+                    ⚡ Velocidade de entrega 5x maior que times analógicos.
+                </div>
+            `;
+        });
+    }
 
     // Helper to escape HTML tags in code blocks
     function escapeHTML(str) {
@@ -543,21 +545,23 @@ async def test_webhook_latency_threshold():
     const chartDots = document.querySelectorAll('.chart-dot');
     const chartTooltip = document.getElementById('chartTooltip');
 
-    chartDots.forEach(dot => {
-        dot.addEventListener('mouseenter', (e) => {
-            const val = dot.getAttribute('data-val');
-            const week = dot.nextElementSibling || { textContent: 'Faturamento' };
-            chartTooltip.innerHTML = `📈 <strong>Faturamento: ${val}</strong>`;
-            chartTooltip.style.borderColor = "var(--accent-blue)";
-            chartTooltip.style.background = "rgba(10, 65, 116, 0.4)";
+    if (chartTooltip && chartDots.length > 0) {
+        chartDots.forEach(dot => {
+            dot.addEventListener('mouseenter', (e) => {
+                const val = dot.getAttribute('data-val');
+                const week = dot.nextElementSibling || { textContent: 'Faturamento' };
+                chartTooltip.innerHTML = `📈 <strong>Faturamento: ${val}</strong>`;
+                chartTooltip.style.borderColor = "var(--accent-blue)";
+                chartTooltip.style.background = "rgba(10, 65, 116, 0.4)";
+            });
+            
+            dot.addEventListener('mouseleave', () => {
+                chartTooltip.innerHTML = "Passe o mouse nos pontos para ver o valor";
+                chartTooltip.style.borderColor = "var(--border-color)";
+                chartTooltip.style.background = "rgba(0,0,0,0.3)";
+            });
         });
-        
-        dot.addEventListener('mouseleave', () => {
-            chartTooltip.innerHTML = "Passe o mouse nos pontos para ver o valor";
-            chartTooltip.style.borderColor = "var(--border-color)";
-            chartTooltip.style.background = "rgba(0,0,0,0.3)";
-        });
-    });
+    }
 
     // Initialize Presentation on load
     goToSlide(1);
