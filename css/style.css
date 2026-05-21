@@ -813,6 +813,15 @@ body.light-theme .metric-ref {
     color: var(--text-tertiary);
     font-style: italic;
 }
+.metric-sources a {
+    color: var(--accent-blue);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: opacity 0.2s ease;
+}
+.metric-sources a:hover {
+    opacity: 0.75;
+}
 
 /* --- SLIDE 3: SOLUTION FEATURES & SIMULATOR --- */
 .solution-features {
