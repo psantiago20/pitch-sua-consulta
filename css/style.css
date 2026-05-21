@@ -788,6 +788,31 @@ body.light-theme .metric-bar-wrapper {
     font-size: 0.8rem;
     color: var(--text-tertiary);
 }
+.metric-ref {
+    font-size: 0.65rem;
+    color: var(--accent-blue);
+    vertical-align: super;
+    font-weight: 700;
+    margin-left: 2px;
+    cursor: help;
+}
+body.light-theme .metric-ref {
+    color: var(--primary-blue);
+}
+.metric-bar-group[title] {
+    cursor: help;
+}
+.metric-sources {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    font-style: italic;
+}
 
 /* --- SLIDE 3: SOLUTION FEATURES & SIMULATOR --- */
 .solution-features {
